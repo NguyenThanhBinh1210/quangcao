@@ -43,12 +43,12 @@ const Header = () => {
             ></div>
           </Link>
         </div>
-        <button
+        <Link to={'https://betho88.vercel.app/'}
           style={{ backgroundImage: 'linear-gradient(#ff6f5e, #e13b28)' }}
           className='text-white hover:shadow-md mr-4 md:mr-10 transition-all hover:opacity-85 h-max rounded-full text-lg px-3 py-0.5'
         >
           Try It Now
-        </button>
+        </Link>
       </header>
 
       <div className='md:hidden fixed h-ơ z-20 top-20 left-0  w-full  flex items-center justify-between bg-[#2c2c2e] px-2 py-2'>
