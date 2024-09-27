@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="86" viewBox="0 0 86 86">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff6f5e"/>
+      <stop offset="1" stop-color="#e13b28"/>
+    </linearGradient>
+    <filter id="椭圆_179" x="0" y="0" width="86" height="86" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#e33e2b" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="api" transform="translate(-438 -1504)">
+    <g transform="matrix(1, 0, 0, 1, 438, 1504)" filter="url(#椭圆_179)">
+      <circle id="椭圆_179-2" data-name="椭圆 179" cx="34" cy="34" r="34" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="icon_api" transform="translate(451 1514)">
+      <rect id="Rectangle_105" data-name="Rectangle 105" width="60" height="60" transform="translate(0 0)" fill="none"/>
+      <g id="api-2" data-name="api" transform="translate(12.531 12.485)">
+        <path id="路径_8067" data-name="路径 8067" d="M41.242,18.279a15.955,15.955,0,0,0-.548-4.153l2.115-1.518L38.7,5.671,36.3,6.7a16.692,16.692,0,0,0-7.37-4.154L28.636,0H20.425l-.29,2.546A16.691,16.691,0,0,0,12.765,6.7l-2.409-1.03L6.251,12.608l2.115,1.518a16.017,16.017,0,0,0,0,8.306L6.251,23.95l4.105,6.937,2.409-1.03a16.691,16.691,0,0,0,7.369,4.154l.29,2.546h8.211l.29-2.546a16.691,16.691,0,0,0,7.37-4.154l2.409,1.03L42.81,23.95l-2.115-1.518A15.955,15.955,0,0,0,41.242,18.279ZM27.682,32.105l-.767.166-.244,2.145H22.39l-.244-2.145-.767-.166a14.516,14.516,0,0,1-7.544-4.252l-.531-.564-2.029.867L9.135,24.54l1.78-1.278-.235-.73a13.908,13.908,0,0,1,0-8.5l.235-.73-1.78-1.278L11.275,8.4,13.3,9.27l.531-.564a14.516,14.516,0,0,1,7.544-4.252l.767-.166.244-2.145h4.28l.244,2.145.767.166a14.517,14.517,0,0,1,7.544,4.252l.531.564L37.785,8.4l2.14,3.616L38.145,13.3l.235.73a13.908,13.908,0,0,1,0,8.5l-.235.73,1.78,1.278-2.14,3.616-2.029-.867-.531.564A14.515,14.515,0,0,1,27.682,32.105Z" transform="translate(-6.251 0)" fill="#fff"/>
+        <path id="路径_8068" data-name="路径 8068" d="M125.773,202.216l-1.579-1.546-4.042,4.127,4.127,4.042,1.546-1.579-2.548-2.5Z" transform="translate(-111.826 -186.467)" fill="#fff"/>
+        <path id="路径_8069" data-name="路径 8069" d="M314.891,202.216l2.5,2.548-2.548,2.5,1.546,1.579,4.127-4.042-4.042-4.127Z" transform="translate(-292.279 -186.467)" fill="#fff"/>
+        <path id="路径_8070" data-name="路径 8070" d="M0,0H15.258V2.21H0Z" transform="matrix(0.206, -0.979, 0.979, 0.206, 15.634, 25.513)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
