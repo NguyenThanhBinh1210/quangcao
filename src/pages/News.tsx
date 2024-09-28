@@ -9,9 +9,9 @@ const News = () => {
   const size = useDeviceType()
 
   return (
-    <div>
-      <div className='relative'>
-        <img src={`${size === 'mobile' ? bg2 : bg1}`} alt='' />
+    <div className='w-full'>
+      <div className='relative w-full'>
+        <img className='w-full' src={`${size === 'mobile' ? bg2 : bg1}`} alt='' />
         <div className='absolute top-40 md:top-56 left-8 md:left-32'>
           <p className='text-purple-500 text-3xl font-medium'>Meet Us At</p>
           <div className='text-white text-3xl md:text-6xl font-medium'>
@@ -28,7 +28,7 @@ const News = () => {
         </div>
       </div>
       <div className={`w-full  md:min-h-0 relative`}>
-        <img src={`${size === 'pc' ? bg4 : bg5}`} alt='áds' />
+        <img className='w-full' src={`${size === 'pc' ? bg4 : bg5}`} alt='áds' />
         <img src={bg6} alt="bg6" className='absolute top-1/2 md:left-20 md:-translate-y-1/2 md:max-w-[781px]' />
         <div className='md:py-[240px] text-white w-[300px] md:w-auto md:px-10 absolute top-0  left-1/2  -translate-x-1/2 md:left-0 md:-translate-x-0  md:right-16'>
           <div className='md:max-w-[590px] ml-auto pt-20 md:pt-0'>
@@ -53,7 +53,7 @@ const News = () => {
           </div>
         </div>
       </div>
-      <div className='md:py-[240px] text-black w-[300px] mx-auto md:w-auto md:px-10  top-0 '>
+      <div className='md:py-[240px] hidden md:flex text-black w-[300px] mx-auto md:w-auto md:px-10  top-0 '>
         <div className='md:max-w-[590px] mx-auto pt-20 md:pt-0'>
           <p className='uppercase  text-[28px] md:text-6xl w-full font-bold border-b mx-auto md:ml-0 md:mr-auto md:pb-5 mb-4'>
             Media Interview

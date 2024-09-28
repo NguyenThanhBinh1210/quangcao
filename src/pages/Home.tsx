@@ -11,9 +11,9 @@ const Home = () => {
   })
 
   return (
-    <div>
-      <div className='relative'>
-        <img src={about_bg} alt='about_bg' />
+    <div className='w-full'>
+      <div className='relative w-full'>
+        <img loading='lazy' className='w-full' src={about_bg} alt='about_bg' />
         <div className='bg-[#2c2c2e] py-8 md:py-0 md:bg-transparent md:absolute top-0 left-0 w-full h-full'>
           <div className='max-w-[1240px] mx-auto '>
             <div className='max-w-[600px] text-white md:ml-auto px-3 md:px-0  md:mt-40'>

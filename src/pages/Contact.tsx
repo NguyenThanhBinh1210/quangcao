@@ -4,7 +4,7 @@ import AnimatedSection from '~/components/AnimatedSection'
 const Contact = () => {
   return (
     <div className='relative overflow-hidden'>
-      <img className='h-[200vw] md:h-auto' src={bgmodel2} alt='' />
+      <img className='h-[200vw] md:h-auto w-full' src={bgmodel2} alt='' />
       <img className='absolute top-0 right-0' src={bgmodel} alt='' />
       <div className='absolute py-10 bottom-0 md:top-1/2 md:-translate-y-1/2 md:h-max  md:left-[100px] text-black bg-black bg-opacity-10 rounded-2xl   md:max-w-[753px] px-10'>
         <AnimatedSection>

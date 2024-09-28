@@ -11,9 +11,9 @@ const Products = () => {
   const size = useDeviceType()
 
   return (
-    <div>
+    <div className='w-full'>
       <div className={`w-full  md:min-h-0 relative`}>
-        <img src={`${size === 'pc' ? bg1 : bg2}`} alt='ád' />
+        <img className='w-full' src={`${size === 'pc' ? bg1 : bg2}`} alt='ád' />
         <div className='md:py-[240px] text-white px-10 absolute top-0'>
           <div className='max-w-[590px] pt-20 md:pt-0'>
             <p className='uppercase  text-[28px] md:text-6xl w-full font-bold border-b mx-auto md:ml-0 md:mr-auto md:pb-5 mb-4'>
@@ -34,7 +34,7 @@ const Products = () => {
         </div>
       </div>
       <div className={`w-full  md:min-h-0 relative`}>
-        <img src={`${size === 'pc' ? bg3 : bg4}`} alt='áds' />
+        <img className='w-full' src={`${size === 'pc' ? bg3 : bg4}`} alt='áds' />
         <div className='md:py-[240px] text-white px-10 absolute top-0 md:right-0'>
           <AnimatedSection>
             <div className='max-w-[590px] ml-auto pt-20 md:pt-0'>
@@ -59,7 +59,7 @@ const Products = () => {
         </div>
       </div>
       <div className={`w-full  md:min-h-0 relative`}>
-        <img src={`${size === 'pc' ? bg5 : bg6}`} alt='áds' className='' />
+        <img src={`${size === 'pc' ? bg5 : bg6}`} alt='áds' className='w-full' />
         <div className='md:py-[240px] text-white px-10 absolute top-0 '>
           <AnimatedSection>
             <div className='max-w-[590px] ml-auto pt-7 md:pt-0 '>
