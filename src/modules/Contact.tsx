@@ -1,9 +1,20 @@
 import footerImg from '~/assets/images/footer_bg_d-T6N6PTSE.png'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 const Contact = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1
+  })
   return (
     <div className='relative h-[667px]'>
       <img className='h-full w-full object-cover' src={footerImg} alt='' />
-      <div className='absolute w-full h-full top-0 left-0 px-4'>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7 }}
+        className='absolute w-full h-full top-0 left-0 px-4'>
         <div className='max-w-[500px] md:max-w-[900px] mx-auto md:py-[76px] mt-20  grid gap-3 md:gap-8 md:grid-cols-2'>
           <div className='text-white'>
             <p className='text-[28px] pb-2 w-max mx-auto md:mr-auto md:ml-0 uppercase md:normal-case md:text-7xl border-b border-white  font-bold'>
@@ -43,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

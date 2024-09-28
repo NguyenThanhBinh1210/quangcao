@@ -1,7 +1,15 @@
 import Contact from '~/modules/Contact'
 import about_bg from '~/assets/images/about_kv_pg__d-EL4HPWFL.jpg'
 import about_bg_2 from '~/assets/images/about_img_milestone-SXBJ5PAF.png'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import AnimatedSection from '~/components/AnimatedSection'
 const Home = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1
+  })
+
   return (
     <div>
       <div className='relative'>
@@ -38,45 +46,69 @@ const Home = () => {
       <div className='relative flex flex-col md:flex-row md:justify-end max-w-[1300px] mx-auto py-10 pb-28'>
         <img src={about_bg_2} alt='about_bg_2' loading='lazy' />
         <div className='absolute top-10 left-0 md:pt-10 pl-10 md:pl-0'>
-          <p className='uppercase font-bold text-[28px] md:text-6xl w-max border-b border-black md:pb-3 md:mb-3'>
-            Milestones
-          </p>
-          <p className='md:text-lg mt-2 md:mt-0'>Industrial pioneer and stays ahead of competitors</p>
+          <motion.p
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+          >
+            <p className='uppercase font-bold text-[28px] md:text-6xl w-max border-b border-black md:pb-3 md:mb-3'>
+              Milestones
+            </p>
+          </motion.p>
+          <motion.p
+            ref={ref}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5 }}
+          >
+            <p className='md:text-lg mt-2 md:mt-0'>Industrial pioneer and stays ahead of competitors</p>
+          </motion.p>
         </div>
         <div className='md:absolute top-52 left-0 px-3 md:px-0 space-y-4 md:space-y-0'>
-          <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[600px]'>
-            <p className='text-orange-600 font-bold md:text-6xl'>05</p>
-            <p>
-              ABA Virtual Tournament: During the pandemic, we offer virtual video games by PES and FIFA, as well as live
-              videos for players
-            </p>
-          </div>
-          <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[450px]'>
-            <p className='text-green-400 font-bold md:text-6xl'>04</p>
-            <p>
-              Number Game: While waiting for the result of the draw, players can enjoy live videos of DJs and dancers
-            </p>
-          </div>
-          <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[330px]'>
-            <p className='text-sky-400 font-bold md:text-6xl'>03</p>
-            <p>Score: A new and fun way to predict score, used for handicap and over/under</p>
-          </div>
-          <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[220px]'>
-            <p className='text-purple-500 font-bold md:text-6xl'>02</p>
-            <p>
-              We have created dozens of new gameplay options, such as the first and last corner kicks in the first half,
-              the exact number of corner kicks in the first and second halves, the exact number of goals in penalty
-              kicks, penalty kick odd/even, video assistant referee, etc.
-            </p>
-          </div>
-          <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[100px]'>
-            <p className='text-orange-500 font-bold md:text-6xl'>01</p>
-            <p>
-              Unique handicap and professional over/under in Asian market: SABA Sports is considered an indispensable
-              product creator in the industry, laying the groundwork for its leadership role among Asian sports
-              platforms.
-            </p>
-          </div>
+          <AnimatedSection defoundX={-50} defaultY={0}>
+            <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[600px]'>
+              <p className='text-orange-600 font-bold md:text-6xl'>05</p>
+              <p>
+                ABA Virtual Tournament: During the pandemic, we offer virtual video games by PES and FIFA, as well as
+                live videos for players
+              </p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection defoundX={-50} defaultY={0}>
+            <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[450px]'>
+              <p className='text-green-400 font-bold md:text-6xl'>04</p>
+              <p>
+                Number Game: While waiting for the result of the draw, players can enjoy live videos of DJs and dancers
+              </p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection defoundX={-50} defaultY={0}>
+            <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[330px]'>
+              <p className='text-sky-400 font-bold md:text-6xl'>03</p>
+              <p>Score: A new and fun way to predict score, used for handicap and over/under</p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection defoundX={-50} defaultY={0}>
+            <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[220px]'>
+              <p className='text-purple-500 font-bold md:text-6xl'>02</p>
+              <p>
+                We have created dozens of new gameplay options, such as the first and last corner kicks in the first
+                half, the exact number of corner kicks in the first and second halves, the exact number of goals in
+                penalty kicks, penalty kick odd/even, video assistant referee, etc.
+              </p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection defoundX={-50} defaultY={0}>
+            <div className='w-full md:w-[383px] border-b border-dashed border-black pb-3 md:translate-x-[100px]'>
+              <p className='text-orange-500 font-bold md:text-6xl'>01</p>
+              <p>
+                Unique handicap and professional over/under in Asian market: SABA Sports is considered an indispensable
+                product creator in the industry, laying the groundwork for its leadership role among Asian sports
+                platforms.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
       <Contact></Contact>
